@@ -1,5 +1,7 @@
 package Application;
 
+import Models.Dao.DaoFactory;
+import Models.Dao.SellerDao;
 import Models.Department;
 import Models.Seller;
 
@@ -12,5 +14,9 @@ public class main {
 
         Seller seller = new Seller(1, "Arthur", "ag@gmail.com", new Date(), 1000.0, department);
         System.out.println(seller);
+
+        SellerDao sellerDao = DaoFactory.CreateSellerDao();
+
+
     }
 }
